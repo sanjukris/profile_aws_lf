@@ -1,4 +1,4 @@
-# profile_aws
+# profile_aws_lf
 python run_demo.py
 python -m uvicorn --app-dir /path/to/profile_aws app.server.main:app --port 9000
 

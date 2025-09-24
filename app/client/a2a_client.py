@@ -30,10 +30,10 @@ async def main():
         await fetch_agent_card(client)
 
         # Email and address
-        await send_message(
-            client,
-            "show my email and mailing address for member 378477398",
-        )
+        # await send_message(
+        #     client,
+        #     "show my email and mailing address for member 378477398",
+        # )
 
         # Preferences
         await send_message(
