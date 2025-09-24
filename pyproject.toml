@@ -1,0 +1,15 @@
+[project]
+name = "profile-aws"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "httpx>=0.28.1",
+    "langfuse>=3.5.0",
+    "pydantic>=2.11.9",
+    "pytest>=8.4.2",
+    "respx>=0.22.0",
+    "strands-agents-tools>=0.2.8",
+    "strands-agents[a2a]>=1.9.1",
+]

@@ -1,0 +1,88 @@
+{
+    "info": {
+      "name": "Profile Agent A2A",
+      "_postman_id": "d8a2e1e6-bc2a-4b3f-9a10-1234567890ab",
+      "description": "Local A2A-style API for the Profile Agent with mocked data.",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "variable": [
+      { "key": "baseUrl", "value": "http://127.0.0.1:9000" },
+      { "key": "memberId", "value": "378477398" }
+    ],
+    "item": [
+      {
+        "name": "Health",
+        "request": { "method": "GET", "url": "{{baseUrl}}/healthz" },
+        "event": [
+          {
+            "listen": "test",
+            "script": { "exec": ["pm.test('Status 200', () => pm.response.code === 200);"], "type": "text/javascript" }
+          }
+        ]
+      },
+      {
+        "name": "Agent Card",
+        "request": { "method": "GET", "url": "{{baseUrl}}/a2a/agent-card" },
+        "event": [
+          {
+            "listen": "test",
+            "script": { "exec": ["pm.test('Status 200', () => pm.response.code === 200);", "const j = pm.response.json();", "pm.test('Kind agent_card', () => j.kind === 'agent_card');"], "type": "text/javascript" }
+          }
+        ]
+      },
+      {
+        "name": "Message: Email+Address",
+        "request": {
+          "method": "POST",
+          "header": [{ "key": "Content-Type", "value": "application/json" }],
+          "url": "{{baseUrl}}/a2a/messages",
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"kind\": \"message\",\n  \"role\": \"user\",\n  \"parts\": [\n    { \"kind\": \"text\", \"text\": \"show my email and mailing address for member {{memberId}}\" }\n  ]\n}"
+          }
+        },
+        "event": [
+          {
+            "listen": "test",
+            "script": {
+              "exec": [
+                "pm.test('Status 200', () => pm.response.code === 200);",
+                "const res = pm.response.json();",
+                "pm.test('Has JSON part', () => Array.isArray(res.parts) && res.parts[1] && res.parts[1].kind === 'json');",
+                "const payload = res.parts?.[1]?.json || {};",
+                "pm.test('Profile title present', () => payload.header && payload.header.title.includes(pm.environment.get('memberId')));"
+              ],
+              "type": "text/javascript"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Message: Preferences",
+        "request": {
+          "method": "POST",
+          "header": [{ "key": "Content-Type", "value": "application/json" }],
+          "url": "{{baseUrl}}/a2a/messages",
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"kind\": \"message\",\n  \"role\": \"user\",\n  \"parts\": [\n    { \"kind\": \"text\", \"text\": \"show my contact preferences for member {{memberId}}\" }\n  ]\n}"
+          }
+        },
+        "event": [
+          {
+            "listen": "test",
+            "script": {
+              "exec": [
+                "pm.test('Status 200', () => pm.response.code === 200);",
+                "const res = pm.response.json();",
+                "const payload = res.parts?.[1]?.json || {};",
+                "pm.test('Has preferences list or count', () => Array.isArray(payload?.data?.preferences) || typeof payload?.entities?.[0]?.value === 'string');"
+              ],
+              "type": "text/javascript"
+            }
+          }
+        ]
+      }
+    ]
+  }
+  
