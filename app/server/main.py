@@ -9,6 +9,9 @@ from app.agents.profile_agent import handle_request
 from app.telemetry.tracing import (
     get_current_trace, set_current_trace, reset_current_trace, diagnostics as lf_diagnostics, test_trace as lf_test_trace
 )
+from dotenv import load_dotenv
+load_dotenv()
+
 from langfuse import get_client  # v3 API
 
 app = FastAPI(title="Profile Agent A2A", version="0.1.0")

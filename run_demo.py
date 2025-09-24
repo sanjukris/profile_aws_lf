@@ -9,8 +9,8 @@ if __name__ == "__main__":
     print("intent:", t1)
     print(o1)
 
-    t2, o2 = handle_request(
-        query="Show my contact preferences", member_id="378477398"
-    )
-    print("intent:", t2)
-    print(o2)
+    # t2, o2 = handle_request(
+    #     query="Show my contact preferences", member_id="378477398"
+    # )
+    # print("intent:", t2)
+    # print(o2)

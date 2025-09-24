@@ -216,30 +216,30 @@ wheels = [
 
 [[package]]
 name = "boto3"
-version = "1.40.36"
+version = "1.40.37"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "botocore" },
     { name = "jmespath" },
     { name = "s3transfer" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/8d/21/7bc857b155e8264c92b6fa8e0860a67dc01a19cbe6ba4342500299f2ae5b/boto3-1.40.36.tar.gz", hash = "sha256:bfc1f3d5c4f5d12b8458406b8972f8794ac57e2da1ee441469e143bc0440a5c3", size = 111552, upload_time = "2025-09-22T19:26:17.357Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/18/7c/c0df9efe277586b3170b64011faef1a86d506e63c4c9fa69b420261e711f/boto3-1.40.37.tar.gz", hash = "sha256:222de1ac6b878c2a2ea75ecfdd876ff3e8bd71930a5f9a3631379dfacc402eda", size = 111595, upload_time = "2025-09-23T19:29:51.251Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/70/4c/428b728d5cf9003f83f735d10dd522945ab20c7d67e6c987909f29be12a0/boto3-1.40.36-py3-none-any.whl", hash = "sha256:d7c1fe033f491f560cd26022a9dcf28baf877ae854f33bc64fffd0df3b9c98be", size = 139345, upload_time = "2025-09-22T19:26:15.194Z" },
+    { url = "https://files.pythonhosted.org/packages/ce/bb/c0a1e2109da6cb169de85676bbee9b274f5d0550cff9752d76782d5f54c0/boto3-1.40.37-py3-none-any.whl", hash = "sha256:ccc5aa217e41bcc80e243c12e6b4330a010b5752cdda2618d67d0b854cd730d5", size = 139346, upload_time = "2025-09-23T19:29:49.771Z" },
 ]
 
 [[package]]
 name = "botocore"
-version = "1.40.36"
+version = "1.40.37"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "jmespath" },
     { name = "python-dateutil" },
     { name = "urllib3" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/4b/30/75fdc75933d3bc1c8dd7fbaee771438328b518936906b411075b1eacac93/botocore-1.40.36.tar.gz", hash = "sha256:93386a8dc54173267ddfc6cd8636c9171e021f7c032aa1df3af7de816e3df616", size = 14349583, upload_time = "2025-09-22T19:26:05.957Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/fa/16/d5817f8abed763ca084471ed6055be558f76e35901d684b78c9ff9270694/botocore-1.40.37.tar.gz", hash = "sha256:9d2cfc41963a3a8be8ece395292e29afad2e25aa602d02bc0c0c3a598405a318", size = 14353930, upload_time = "2025-09-23T19:29:42.31Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/d8/51/95c0324ac20b5bbafad4c89dd610c8e0dd6cbadbb2c8ca66dc95ccde98b8/botocore-1.40.36-py3-none-any.whl", hash = "sha256:d6edf75875e4013cb7078875a1d6c289afb4cc6675d99d80700c692d8d8e0b72", size = 14020478, upload_time = "2025-09-22T19:26:02.054Z" },
+    { url = "https://files.pythonhosted.org/packages/3d/ec/d214e91f86bc05821a735ce192e829440f2298ab9a891cc7db1a470211fe/botocore-1.40.37-py3-none-any.whl", hash = "sha256:9d4cee2ae0fe273003c6d1a8c9f7b98c4e40a6f74ba2f37eacba27d97fb7734f", size = 14024050, upload_time = "2025-09-23T19:29:39.626Z" },
 ]
 
 [[package]]
@@ -500,6 +500,19 @@ wheels = [
 ]
 
 [[package]]
+name = "halo"
+version = "0.0.31"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "colorama" },
+    { name = "log-symbols" },
+    { name = "six" },
+    { name = "spinners" },
+    { name = "termcolor" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/ee/48/d53580d30b1fabf25d0d1fcc3f5b26d08d2ac75a1890ff6d262f9f027436/halo-0.0.31.tar.gz", hash = "sha256:7b67a3521ee91d53b7152d4ee3452811e1d2a6321975137762eb3d70063cc9d6", size = 11666, upload_time = "2020-11-10T02:36:48.335Z" }
+
+[[package]]
 name = "html5lib"
 version = "1.1"
 source = { registry = "https://pypi.org/simple" }
@@ -633,6 +646,18 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/0e/5d/edcaa7d3445588b13c28eeb1aeadbfd8c4483c1f241f57e2975f46e29b15/langfuse-3.5.0.tar.gz", hash = "sha256:e68b8e960494f360d57b2feb8b11e01a3e55a0722f39ba8bf54ed4a069a386d5", size = 187504, upload_time = "2025-09-18T16:56:57.652Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/4f/58/108730232d55d321a576981aa6c8ee53d57b782a5002ae7bf7ef1b5b45b3/langfuse-3.5.0-py3-none-any.whl", hash = "sha256:946b02f1f4cbe3ace88860832e73bb8e9548575dcd27b8cbdb30b7b2fdf62cf8", size = 348539, upload_time = "2025-09-18T16:56:55.639Z" },
+]
+
+[[package]]
+name = "log-symbols"
+version = "0.0.14"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "colorama" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/45/87/e86645d758a4401c8c81914b6a88470634d1785c9ad09823fa4a1bd89250/log_symbols-0.0.14.tar.gz", hash = "sha256:cf0bbc6fe1a8e53f0d174a716bc625c4f87043cc21eb55dd8a740cfe22680556", size = 3211, upload_time = "2019-08-08T06:32:22.538Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/28/5d/d710c38be68b0fb54e645048fe359c3904cc3cb64b2de9d40e1712bf110c/log_symbols-0.0.14-py3-none-any.whl", hash = "sha256:4952106ff8b605ab7d5081dd2c7e6ca7374584eff7086f499c06edd1ce56dcca", size = 3081, upload_time = "2019-08-08T06:32:20.604Z" },
 ]
 
 [[package]]
@@ -844,6 +869,19 @@ wheels = [
 ]
 
 [[package]]
+name = "ollama"
+version = "0.5.4"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "httpx" },
+    { name = "pydantic" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/72/62/a36be4555e4218d6c8b35e72e0dfe0823845400097275cd81c9aec4ddf39/ollama-0.5.4.tar.gz", hash = "sha256:75857505a5d42e5e58114a1b78cc8c24596d8866863359d8a2329946a9b6d6f3", size = 45233, upload_time = "2025-09-16T00:25:25.785Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/1b/af/d0a23c8fdec4c8ddb771191d9b36a57fbce6741835a78f1b18ab6d15ae7d/ollama-0.5.4-py3-none-any.whl", hash = "sha256:6374c9bb4f2a371b3583c09786112ba85b006516745689c172a7e28af4d4d1a2", size = 13548, upload_time = "2025-09-16T00:25:24.186Z" },
+]
+
+[[package]]
 name = "opentelemetry-api"
 version = "1.37.0"
 source = { registry = "https://pypi.org/simple" }
@@ -1049,6 +1087,7 @@ dependencies = [
     { name = "pytest" },
     { name = "respx" },
     { name = "strands-agents", extra = ["a2a"] },
+    { name = "strands-agents-builder" },
     { name = "strands-agents-tools" },
 ]
 
@@ -1060,6 +1099,7 @@ requires-dist = [
     { name = "pytest", specifier = ">=8.4.2" },
     { name = "respx", specifier = ">=0.22.0" },
     { name = "strands-agents", extras = ["a2a"], specifier = ">=1.9.1" },
+    { name = "strands-agents-builder", specifier = ">=0.1.10" },
     { name = "strands-agents-tools", specifier = ">=0.2.8" },
 ]
 
@@ -1640,6 +1680,15 @@ wheels = [
 ]
 
 [[package]]
+name = "spinners"
+version = "0.0.24"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/d3/91/bb331f0a43e04d950a710f402a0986a54147a35818df0e1658551c8d12e1/spinners-0.0.24.tar.gz", hash = "sha256:1eb6aeb4781d72ab42ed8a01dcf20f3002bf50740d7154d12fb8c9769bf9e27f", size = 5308, upload_time = "2020-02-19T21:42:32.326Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/9f/8e/3310207a68118000ca27ac878b8386123628b335ecb3d4bec4743357f0d1/spinners-0.0.24-py3-none-any.whl", hash = "sha256:2fa30d0b72c9650ad12bbe031c9943b8d441e41b4f5602b0ec977a19f3290e98", size = 5499, upload_time = "2020-02-19T21:42:30.876Z" },
+]
+
+[[package]]
 name = "sqlalchemy"
 version = "2.0.43"
 source = { registry = "https://pypi.org/simple" }
@@ -1740,6 +1789,25 @@ a2a = [
     { name = "starlette" },
     { name = "uvicorn" },
 ]
+ollama = [
+    { name = "ollama" },
+]
+
+[[package]]
+name = "strands-agents-builder"
+version = "0.1.10"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "halo" },
+    { name = "prompt-toolkit" },
+    { name = "rich" },
+    { name = "strands-agents", extra = ["ollama"] },
+    { name = "strands-agents-tools" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/6d/3a/ed02ce65dc9b6880b1fb3c183086ba0868d736b20bba0e78c3b54fb68462/strands_agents_builder-0.1.10.tar.gz", hash = "sha256:34230cecc55ec340df0d49d69c13bc20d3a9afb6faa2365ce001adfa98e57c9b", size = 24996, upload_time = "2025-09-17T19:56:54.299Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/d4/de/2e79bf9d69e3b5720ff3e3bb6f3777a7316d46086d0afa3558523a06d9b6/strands_agents_builder-0.1.10-py3-none-any.whl", hash = "sha256:dc3c621fb24d26d3081c40352318e17e90d0eb73a31e84503239b30add4c872f", size = 30597, upload_time = "2025-09-17T19:56:52.917Z" },
+]
 
 [[package]]
 name = "strands-agents-tools"
@@ -1788,6 +1856,15 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/0a/d4/2b0cd0fe285e14b36db076e78c93766ff1d529d70408bd1d2a5a84f1d929/tenacity-9.1.2.tar.gz", hash = "sha256:1169d376c297e7de388d18b4481760d478b0e99a777cad3a9c86e556f4b697cb", size = 48036, upload_time = "2025-04-02T08:25:09.966Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/e5/30/643397144bfbfec6f6ef821f36f33e57d35946c44a2352d3c9f0ae847619/tenacity-9.1.2-py3-none-any.whl", hash = "sha256:f77bf36710d8b73a50b2dd155c97b870017ad21afe6ab300326b0371b3b05138", size = 28248, upload_time = "2025-04-02T08:25:07.678Z" },
+]
+
+[[package]]
+name = "termcolor"
+version = "3.1.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/ca/6c/3d75c196ac07ac8749600b60b03f4f6094d54e132c4d94ebac6ee0e0add0/termcolor-3.1.0.tar.gz", hash = "sha256:6a6dd7fbee581909eeec6a756cff1d7f7c376063b14e4a298dc4980309e55970", size = 14324, upload_time = "2025-04-30T11:37:53.791Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/4f/bd/de8d508070629b6d84a30d01d57e4a65c69aa7f5abe7560b8fad3b50ea59/termcolor-3.1.0-py3-none-any.whl", hash = "sha256:591dd26b5c2ce03b9e43f391264626557873ce1d379019786f99b0c2bee140aa", size = 7684, upload_time = "2025-04-30T11:37:52.382Z" },
 ]
 
 [[package]]

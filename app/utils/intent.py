@@ -1,45 +1,17 @@
 from __future__ import annotations
+import os
+from app.utils.intent_keywords import classify_intent_keywords
+from app.utils.intent_llm import classify_intent_llm
 
 def classify_intent(query: str) -> str:
     """
-    Decide which tool to call based on a simple keyword check.
-    Returns one of:
-      - "fetch_email_and_address"
-      - "fetch_contact_preference"
+    Dynamic classifier controlled by env:
+      INTENT_CLASSIFIER=keywords | llm   (default: keywords)
+      INTENT_LLM_STACK=langgraph | strands (default: langgraph)  # only used when INTENT_CLASSIFIER=llm
     """
-    q = (query or "").lower()
-
-    email_addr_hits = any(
-        w in q
-        for w in [
-            "email",
-            "e-mail",
-            "mail id",
-            "postal address",
-            "mailing address",
-            "address",
-            "zip",
-            "city",
-            "state",
-        ]
-    )
-    pref_hits = any(
-        w in q
-        for w in [
-            "preference",
-            "preferences",
-            "contact method",
-            "notifications",
-            "sms",
-            "text",
-            "eob",
-            "language",
-            "digital wallet",
-        ]
-    )
-
-    if email_addr_hits and not pref_hits:
-        return "fetch_email_and_address"
-    if pref_hits and not email_addr_hits:
-        return "fetch_contact_preference"
-    return "fetch_email_and_address" if email_addr_hits else "fetch_contact_preference"
+    mode = (os.getenv("INTENT_CLASSIFIER") or "keywords").strip().lower()
+    if mode == "llm":
+        print(f"[intent] using llm: {mode}")
+        return classify_intent_llm(query)
+    print(f"[intent] using keywords: {mode}")
+    return classify_intent_keywords(query)

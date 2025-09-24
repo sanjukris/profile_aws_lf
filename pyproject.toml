@@ -10,6 +10,7 @@ dependencies = [
     "pydantic>=2.11.9",
     "pytest>=8.4.2",
     "respx>=0.22.0",
+    "strands-agents-builder>=0.1.10",
     "strands-agents-tools>=0.2.8",
     "strands-agents[a2a]>=1.9.1",
 ]

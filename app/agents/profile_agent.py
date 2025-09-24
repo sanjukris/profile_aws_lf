@@ -1,7 +1,9 @@
 from __future__ import annotations
+
+from strands import Agent
+
 from typing import Any, Dict, Tuple
 from pydantic import ValidationError
-from strands import Agent
 
 import time
 

@@ -9,3 +9,4 @@ curl -s http://127.0.0.1:9000/a2a/agent-card | jq
 python app/client/a2a_client.py
 
 
+export INTENT_CLASSIFIER=llm
